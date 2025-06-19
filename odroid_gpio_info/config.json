@@ -1,0 +1,18 @@
+{
+    "name": "Odroid N2+ GPIO Info",
+    "version": "1.0.0",
+    "slug": "odroid_gpio_info",
+    "description": "Leest GPIO chip informatie uit (vergelijkbaar met gpioinfo) op een Odroid N2+ en logt dit naar de add-on log.",
+    "arch": [
+        "aarch64",
+        "armv7",
+        "armhf",
+        "amd64",
+        "i386"
+    ],
+    "startup": "once",
+    "boot": "manual",
+    "full_access": true,
+    "options": {},
+    "schema": {}
+}
