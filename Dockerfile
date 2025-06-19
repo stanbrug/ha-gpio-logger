@@ -1,16 +1,7 @@
-FROM python:3.9-alpine
+FROM alpine:3.19
 
 RUN apk add --no-cache \
     libgpiod \
-    libgpiod-dev \
-    build-base \
-    python3-dev \
-    py3-pip
+    bash
 
-RUN pip3 install gpiod
-
-WORKDIR /app
-
-COPY app.py .
-
-CMD ["python3", "app.py"]
+CMD ["/bin/sh", "-c", "echo '📌 GPIO info voor Odroid N2+' && gpioinfo /dev/gpiochip0 && gpioinfo /dev/gpiochip1"]
