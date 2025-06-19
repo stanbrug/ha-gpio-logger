@@ -1,0 +1,16 @@
+name: "GPIO Info Logger"
+version: "1.0"
+slug: "gpio_info_logger"
+description: "Logt GPIO chip info (offsets) in de add-on log"
+arch:
+  - aarch64
+startup: application
+init: false
+hassio_api: false
+hassio_role: default
+homeassistant_api: false
+privileged:
+  - SYS_RAWIO
+devices:
+  - /dev/gpiochip0
+  - /dev/gpiochip1
